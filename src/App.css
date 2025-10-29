@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4169e1 0%, #274bdb 100%);
   padding: 20px;
 }
 
@@ -30,7 +30,7 @@
   margin-bottom: 20px;
   font-size: 1.5em;
   font-weight: bold;
-  color: #333;
+  color: #1e3a8a;
   text-align: center;
 }
 
@@ -46,7 +46,7 @@
 
 .square {
   background: #f0f0f0;
-  border: 3px solid #333;
+  border: 3px solid #274bdb;
   font-size: 4em;
   font-weight: bold;
   width: 100px;
@@ -55,13 +55,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 10px;
-  color: #333;
+  color: #1e3a8a;
 }
 
 .square:hover {
   background: #e0e0e0;
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(39, 75, 219, 0.25);
 }
 
 .square:active {
@@ -69,7 +69,7 @@
 }
 
 .square.winner {
-  background: #4caf50;
+  background: #1d4ed8;
   color: white;
   animation: pulse 0.5s ease;
 }
@@ -85,7 +85,7 @@
 
 .game-info {
   background: white;
-  padding: 20px;
+  padding: 20px 28px 20px 20px; /* extra right padding to move scrollbar away */
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   max-width: 300px;
@@ -93,7 +93,7 @@
 }
 
 .reset-button {
-  background: #667eea;
+  background: #4169e1;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -107,7 +107,7 @@
 }
 
 .reset-button:hover {
-  background: #5568d3;
+  background: #365ac9;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -118,10 +118,11 @@
 
 .game-info ol {
   list-style: none;
-  padding: 0;
+  padding: 0 12px 0 0; /* add right padding so scrollbar isn't tight to buttons */
   margin: 0;
   max-height: 200px;
   overflow-y: auto;
+  scrollbar-gutter: stable; /* reserve space for scrollbar */
 }
 
 .game-info li {
@@ -129,7 +130,7 @@
 }
 
 .game-info button {
-  background: #764ba2;
+  background: #274bdb;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -141,7 +142,7 @@
 }
 
 .game-info button:hover {
-  background: #653f8a;
+  background: #1f3db3;
 }
 
 .game-info button:active {
@@ -154,17 +155,17 @@
 }
 
 .game-info ol::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #e6ecff;
   border-radius: 10px;
 }
 
 .game-info ol::-webkit-scrollbar-thumb {
-  background: #764ba2;
+  background: #4169e1;
   border-radius: 10px;
 }
 
 .game-info ol::-webkit-scrollbar-thumb:hover {
-  background: #653f8a;
+  background: #365ac9;
 }
 
 

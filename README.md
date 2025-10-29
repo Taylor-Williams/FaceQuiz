@@ -44,6 +44,35 @@ npm run build
 
 The built files will be in the `dist` directory.
 
+### Testing
+
+The project includes a comprehensive test suite using Vitest and React Testing Library.
+
+Run tests:
+```bash
+npm test
+```
+
+Run tests in watch mode:
+```bash
+npm test -- --watch
+```
+
+Run tests with UI (interactive):
+```bash
+npm run test:ui
+```
+
+The test suite covers:
+- ✅ Game logic (winner calculation for all scenarios)
+- ✅ Component rendering and interactions
+- ✅ Player turns and alternation
+- ✅ Winner detection (rows, columns, diagonals)
+- ✅ Draw detection
+- ✅ Game history and time travel
+- ✅ Reset functionality
+- ✅ Preventing invalid moves
+
 ## How to Play
 
 1. The game starts with player X
@@ -58,20 +87,28 @@ The built files will be in the `dist` directory.
 ```
 .
 ├── src/
-│   ├── App.jsx         # Main game component
-│   ├── App.css         # Game styles
-│   ├── main.jsx        # React entry point
-│   └── index.css       # Global styles
-├── index.html          # HTML template
-├── package.json        # Dependencies
-├── vite.config.js      # Vite configuration
-└── README.md           # This file
+│   ├── App.jsx              # Main game component
+│   ├── App.test.jsx          # Component tests
+│   ├── App.css               # Game styles
+│   ├── main.jsx              # React entry point
+│   ├── index.css             # Global styles
+│   ├── utils/
+│   │   ├── gameLogic.js      # Game logic (winner calculation)
+│   │   └── gameLogic.test.js # Game logic tests
+│   └── test/
+│       └── setup.js          # Test setup configuration
+├── index.html                # HTML template
+├── package.json              # Dependencies
+├── vite.config.js            # Vite configuration
+└── README.md                 # This file
 ```
 
 ## Technologies Used
 
 - React 18
 - Vite
+- Vitest (testing framework)
+- React Testing Library
 - CSS3 with animations
 
 Enjoy playing! 🎮
